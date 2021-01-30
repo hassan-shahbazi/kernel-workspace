@@ -1,7 +1,9 @@
 obj-m += ktask01.o
 
-kernel_version = $(shell uname -r)
-build_dir = /lib/modules/$(kernel_version)/build
+ifndef $(build_dir)
+	kernel_version = $(shell uname -r)
+	build_dir = /lib/modules/$(kernel_version)/build
+endif
 kernel_module = ktask01.ko
 
 all:

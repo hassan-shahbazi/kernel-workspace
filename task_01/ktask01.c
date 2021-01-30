@@ -4,6 +4,7 @@
 
 MODULE_AUTHOR("Hassan Shahbazi");
 MODULE_DESCRIPTION("Linux Kernel Mentorship task 01");
+MODULE_LICENSE("GPL");
 
 static int __init task_init(void) {
     printk(KERN_INFO "Hello World!\n");
