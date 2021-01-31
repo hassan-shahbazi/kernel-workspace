@@ -1,9 +1,15 @@
+make -C /lib/modules/5.4.83/build M=/home/hassan/dev/kernel/task_01 clean
+make[1]: Entering directory '/usr/src/linux-5.4.83'
+make[1]: Leaving directory '/usr/src/linux-5.4.83'
 
 
 make -C /lib/modules/5.4.83/build M=/home/hassan/dev/kernel/task_01 modules
 make[1]: Entering directory '/usr/src/linux-5.4.83'
+  CC [M]  /home/hassan/dev/kernel/task_01/ktask01.o
   Building modules, stage 2.
   MODPOST 1 modules
+  CC [M]  /home/hassan/dev/kernel/task_01/ktask01.mod.o
+  LD [M]  /home/hassan/dev/kernel/task_01/ktask01.ko
 make[1]: Leaving directory '/usr/src/linux-5.4.83'
 
 
@@ -11,5 +17,5 @@ sudo dmesg -C
 sudo insmod ktask01.ko
 sudo rmmod ktask01.ko
 dmesg
-[330255.396921] Hello World!
-[330255.404204] Goodby!
+[426514.319237] Hello World!
+[426514.325678] Goodbye!

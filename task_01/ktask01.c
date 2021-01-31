@@ -7,12 +7,12 @@ MODULE_DESCRIPTION("Linux Kernel Mentorship task 01");
 MODULE_LICENSE("GPL");
 
 static int __init task_init(void) {
-    printk(KERN_INFO "Hello World!\n");
+    printk(KERN_DEBUG "Hello World!\n");
     return 0;
 }
 
 static void __exit task_exit(void) {
-    printk(KERN_INFO "Goodby!\n");
+    printk(KERN_DEBUG "Goodbye!\n");
 }
 
 module_init(task_init);
