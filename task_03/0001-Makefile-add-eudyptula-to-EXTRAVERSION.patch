@@ -1,0 +1,29 @@
+From ff45041e7faecee4adf1cb1d7f48b0f89db6c3e4 Mon Sep 17 00:00:00 2001
+From: Hassan Shahbazi <h.shahbazi@tuta.io>
+Date: Thu, 4 Feb 2021 10:43:35 +0200
+Subject: [PATCH] Makefile: add -eudyptula to EXTRAVERSION
+
+As a part of task_03 requested by eudyptula in the path of Linux Kernel
+Mentorship program.
+
+Signed-off-by: Hassan Shahbazi <h.shahbazi@tuta.io>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index f5842126e89d..0b953a5303dc 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,7 +2,7 @@
+ VERSION = 5
+ PATCHLEVEL = 11
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc6
++EXTRAVERSION = -rc6-eudyptula
+ NAME = Kleptomaniac Octopus
+ 
+ # *DOCUMENTATION*
+-- 
+2.26.2
+
