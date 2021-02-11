@@ -1,0 +1,24 @@
+make -C /lib/modules/5.11.0-rc7-x86_64-00002-ge0756cfc7d7c/build M=/home/hassan/dev/kernel/task_06 clean
+make[1]: Entering directory '/usr/src/linux-git'
+make[1]: Leaving directory '/usr/src/linux-git'
+
+
+make -C /lib/modules/5.11.0-rc7-x86_64-00002-ge0756cfc7d7c/build M=/home/hassan/dev/kernel/task_06 modules
+make[1]: Entering directory '/usr/src/linux-git'
+  CC [M]  /home/hassan/dev/kernel/task_06/ktask06.o
+  MODPOST /home/hassan/dev/kernel/task_06/Module.symvers
+  CC [M]  /home/hassan/dev/kernel/task_06/ktask06.mod.o
+  LD [M]  /home/hassan/dev/kernel/task_06/ktask06.ko
+make[1]: Leaving directory '/usr/src/linux-git'
+
+
+sudo dmesg -C
+sudo insmod ktask06.ko
+sudo ./script.sh
+read from the device
+19aa2fa32708
+write to the device
+Succeed
+sudo rmmod ktask06.ko
+dmesg
+[21745.453406] value is written with result: 13
