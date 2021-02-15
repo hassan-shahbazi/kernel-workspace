@@ -5,6 +5,7 @@
 #include <linux/debugfs.h>
 #include <linux/fs.h>
 #include <linux/slab.h>
+#include <linux/jiffies.h>
 
 MODULE_AUTHOR("Hassan Shahbazi");
 MODULE_DESCRIPTION("Linux Kernel Mentorship task 08");
@@ -57,6 +58,7 @@ static int __init task_init(void)
 {
 	eudyptula = debugfs_create_dir(DIRECTORY, NULL);
 	debugfs_create_file("id", 0755, eudyptula, NULL, &fops);
+	debugfs_create_u64("jiffies", 0444, eudyptula, (u64*)&jiffies);
 	return 0;
 }
 module_init(task_init);
